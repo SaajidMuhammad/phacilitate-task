@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
+import Image from "next/image";
 
 const fadeUp = (delay: number) => ({
   initial: { opacity: 0, y: 24 },
@@ -10,7 +11,7 @@ const fadeUp = (delay: number) => ({
 });
 
 export const Hero = () => (
-  <section className="bg-white px-5 pt-12 pb-0 sm:px-8 md:pt-16 lg:px-10 lg:pt-20">
+  <section className="bg-white px-5 pt-8 pb-0 sm:px-8 md:pt-12 lg:px-10 lg:pt-12">
     <div className="mx-auto grid max-w-[1200px] items-start gap-10 lg:grid-cols-2 lg:gap-12">
       <div className="max-w-lg pt-4 md:pt-8">
         <motion.span
@@ -70,87 +71,155 @@ export const Hero = () => (
               </p>
             </div>
             <p className="text-[14px] text-(--text-muted)">
-              From 120+ <span className="font-bold text-black underline">reviews</span>{" "}
+              From 120+{" "}
+              <span className="font-bold text-black underline">
+                reviews
+              </span>{" "}
             </p>
           </div>
         </motion.div>
       </div>
 
       <motion.div
-        initial={{ opacity: 0, scale: 0.96 }}
+        initial={{ opacity: 0, scale: 0.98 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
-        className="relative flex items-start justify-center lg:justify-end"
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        className="grid w-full max-w-[550px] grid-cols-2 overflow-hidden bg-white "
       >
-        <div className="relative w-full max-w-[480px]">
-          <div className="relative mx-auto w-[200px] sm:w-[220px] md:w-[240px]">
-            <div className="aspect-[9/18] rounded-[28px] border-2 border-(--border) bg-(--sage) p-2 shadow-lg">
-              <div className="flex h-full flex-col rounded-[22px] bg-white p-3">
-                <div className="mb-2 flex items-center justify-between">
-                  <div className="h-2 w-10 rounded-full bg-(--border)" />
-                  <div className="h-5 w-5 rounded-full bg-(--sage)" />
-                </div>
-                <div className="mb-3 mt-2">
-                  <div className="h-2 w-20 rounded-full bg-(--border)" />
-                  <div className="mt-1.5 h-4 w-14 rounded bg-(--text-primary) text-[8px] font-bold leading-[16px] text-white text-center">
-                    $4,250
+        <div className="relative aspect-square overflow-hidden bg-(--bg-gray)">
+          <Image
+            src="/images/phone-hand.png"
+            width={1000}
+            height={1000}
+            alt="Interface"
+            className="h-full w-full object-contain scale-100"
+          />
+          <div className="absolute top-8 right-8 flex flex-col items-end gap-2">
+            <div className="h-[6px] w-16 rounded-full bg-white/90" />
+            <div className="h-[6px] w-10 rounded-full bg-white/60" />
+          </div>
+        </div>
+
+        {/* 2. TOP RIGHT: CURRENCIES */}
+        <div
+          className="overflow-hidden rounded-l-full bg-[#EBE9DB] p-8 flex flex-col justify-between"
+        >
+          <div className="relative z-10">
+            <h3 className="text-[3.5rem] pl-32 font-medium tracking-tight text-[#1A2E26] leading-none">
+              56+
+            </h3>
+            <p className="mt-8 text-xl font-medium text-[#1A2E26]/80">
+              Currencies
+            </p>
+          </div>
+
+          <div className="relative self-end opacity-60">
+            <svg
+              width="70"
+              height="70"
+              viewBox="0 0 100 100"
+              className="stroke-[#1A2E26] fill-none stroke-[1.8]"
+            >
+              <circle cx="50" cy="50" r="45" />
+              <ellipse cx="50" cy="50" rx="18" ry="45" />
+              <line x1="5" y1="50" x2="95" y2="50" />
+              <line x1="12" y1="30" x2="88" y2="30" />
+              <line x1="12" y1="70" x2="88" y2="70" />
+            </svg>
+          </div>
+        </div>
+
+        {/* 3. BOTTOM LEFT: USERS ACTIVE */}
+        <div className="relative aspect-square overflow-hidden bg-[#D9E3DE] p-8 flex flex-col justify-between">
+          {/* Large decorative circle mask (Bottom Right oriented) */}
+          <div className="absolute -bottom-16 -right-16 h-72 w-72 rounded-full bg-white/40 pointer-events-none" />
+
+          <div className="relative z-10 flex gap-1">
+            {/* Custom Sparkle Shapes using clip-path */}
+            {[1, 2].map((i) => (
+              <div
+                key={i}
+                className="h-10 w-8 bg-[#1A2E26]"
+                style={{
+                  clipPath:
+                    "polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%)",
+                }}
+              />
+            ))}
+          </div>
+
+          <div className="relative z-10 flex flex-col items-end gap-6">
+            <p className="text-xl font-medium text-[#1A2E26]/90">
+              Users Active
+            </p>
+            <div className="flex items-center gap-2">
+              <div className="flex -space-x-3">
+                {[1, 2, 3].map((i) => (
+                  <div
+                    key={i}
+                    className="h-12 w-12 rounded-full border-[3px] border-[#D9E3DE] bg-gray-300 overflow-hidden shadow-sm"
+                  >
+                    <img
+                      src={`https://i.pravatar.cc/150?u=acc${i}`}
+                      alt="user"
+                    />
                   </div>
-                </div>
-                <div className="flex-1 rounded-xl bg-(--sage)/30 p-2">
-                  <div className="flex h-full flex-col justify-end gap-1">
-                    {[40, 65, 50, 80, 60, 75, 90].map((h, i) => (
-                      <div key={i} className="flex items-end gap-1">
-                        <div
-                          className="w-full rounded-sm bg-(--green)"
-                          style={{
-                            height: `${h}%`,
-                            minHeight: 3,
-                            maxHeight: 20,
-                          }}
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                ))}
               </div>
+              <button className="h-12 w-12 rounded-full bg-[#1A2E26] flex items-center justify-center text-white transition-transform hover:scale-105">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                >
+                  <path d="M7 17L17 7M17 7H7M17 7V17" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* 4. BOTTOM RIGHT: SAVINGS GRAPH */}
+        <div className="relative aspect-square overflow-hidden bg-[#243B33] p-8 flex flex-col justify-between text-white">
+          <div className="flex items-start justify-between">
+            <h3 className="text-3xl font-medium tracking-tight">$196,000</h3>
+            <div className="pt-1">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="3"
+              >
+                <path d="M12 19V5M12 5L5 12M12 5L19 12" />
+              </svg>
             </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
-            className="absolute top-4 right-0 rounded-lg border border-(--border-light) bg-white p-4 shadow-md sm:right-2"
-          >
-            <p className="text-[26px] font-bold text-(--green)">56+</p>
-            <p className="text-[11px] text-(--text-muted)">Currencies</p>
-          </motion.div>
+          <div className="flex-1 flex items-center pt-8">
+            {/* Sharp, pixel-accurate growth line */}
+            <svg viewBox="0 0 140 60" className="w-full h-24 overflow-visible">
+              <motion.path
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
+                transition={{ duration: 1.5, delay: 0.5 }}
+                d="M0,50 L20,45 L35,55 L55,35 L75,45 L90,20 L110,30 L140,5"
+                fill="none"
+                stroke="white"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.55, ease: "easeOut" }}
-            className="absolute top-28 right-[-10px] rounded-lg border border-(--border-light) bg-white px-4 py-3 shadow-md sm:right-0"
-          >
-            <p className="text-[22px] font-bold text-(--navy)">$196,000</p>
-            <p className="text-[11px] text-(--text-muted)">Users Active</p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.65, ease: "easeOut" }}
-            className="absolute bottom-16 right-0 rounded-lg border border-(--border-light) bg-white px-4 py-3 shadow-md sm:right-4"
-          >
-            <p className="text-[11px] text-(--text-muted)">Saving</p>
-            <div className="mt-1 flex items-center gap-2">
-              <div className="h-6 w-6 rounded-full bg-(--sage)" />
-              <div className="flex flex-col">
-                <div className="h-1 w-12 rounded-full bg-(--green)" />
-                <div className="mt-0.5 h-1 w-8 rounded-full bg-(--sage)" />
-              </div>
-            </div>
-          </motion.div>
+          <div className="text-right">
+            <p className="text-white/60 text-lg font-light">Saving</p>
+          </div>
         </div>
       </motion.div>
     </div>
