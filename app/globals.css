@@ -7,7 +7,7 @@
   --cream: #EBE8D8;
   --navy: #0A0C29;
   --white: #ffffff;
-  --bg: #f8f8f5;
+  --bg: var(--white);
   --bg-alt: #f2f2ed;
   --bg-gray: #b1bdbd;
   --text-primary: #0A0C29;
