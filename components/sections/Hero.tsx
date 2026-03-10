@@ -213,7 +213,7 @@ export const Hero = () => (
           </div>
 
           <div className="text-right">
-            <p className="text-white/60 text-lg font-light">Saving</p>
+            <p className="text-white text-lg font-medium">Saving</p>
           </div>
         </div>
       </motion.div>
