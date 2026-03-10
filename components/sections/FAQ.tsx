@@ -60,7 +60,7 @@ export const FAQ = () => {
     <section id="faq" className="bg-white px-5 py-16 sm:px-8 md:py-24 lg:px-10">
       <AnimatedSection className="mx-auto grid max-w-[1200px] gap-10 md:grid-cols-[1fr_1.4fr] md:gap-16">
         <motion.div variants={itemVariants}>
-          <span className="mb-3 inline-block text-xs font-medium uppercase tracking-[0.15em] text-(--text-muted)">
+          <span className="mb-3 inline-block text-xs font-medium uppercase tracking-[0.15em] text-(--green)">
             FAQ
           </span>
           <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-(--navy) sm:text-[34px] md:text-[40px]">
