@@ -15,9 +15,9 @@ export const Hero = () => (
       <div className="max-w-lg pt-4 md:pt-8">
         <motion.span
           {...fadeUp(0)}
-          className="mb-5 inline-block text-xs font-medium uppercase tracking-[0.15em] text-(--text-muted)"
+          className="mb-5 inline-block text-xs font-bold uppercase tracking-[0.10em] text-(--green-light)"
         >
-          We&apos;re here
+          Try It Now!
         </motion.span>
 
         <motion.h1
@@ -30,7 +30,10 @@ export const Hero = () => (
           <br />
           <span
             className="text-(--green)"
-            style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontStyle: "italic" }}
+            style={{
+              fontFamily: "Georgia, 'Times New Roman', serif",
+              fontStyle: "italic",
+            }}
           >
             money
           </span>
@@ -40,32 +43,35 @@ export const Hero = () => (
           {...fadeUp(0.12)}
           className="mt-5 max-w-sm text-[15px] leading-relaxed text-(--text-muted)"
         >
-          From your everyday spending, to plan for your future with savings and investments. Ascone helps you get more from your money.
+          From your everyday spending, to plan for your future with savings and
+          investments. Ascone helps you get more from your money.
         </motion.p>
 
         <motion.div {...fadeUp(0.2)} className="mt-7 flex items-center gap-5">
           <Button size="md" href="#">
             Get Started Now
           </Button>
-          <div className="flex items-center gap-2">
-            <div className="flex -space-x-2">
-              {[0, 1, 2].map((i) => (
-                <div
-                  key={i}
-                  className="h-8 w-8 rounded-full border-2 border-white"
-                  style={{
-                    background: ["var(--green)", "var(--sage)", "var(--cream)"][i],
-                  }}
-                />
-              ))}
+          <div>
+            <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1">
+                {[1, 2, 3, 4, 5].map((s) => (
+                  <svg
+                    key={s}
+                    className="h-5 w-5 text-yellow-500"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-[14px] font-bold text-(--text-foreground)">
+                5.0
+              </p>
             </div>
-            <div className="flex items-center gap-1">
-              {[1, 2, 3, 4, 5].map((s) => (
-                <svg key={s} className="h-3 w-3 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              ))}
-            </div>
+            <p className="text-[14px] text-(--text-muted)">
+              From 120+ <span className="font-bold text-black underline">reviews</span>{" "}
+            </p>
           </div>
         </motion.div>
       </div>
@@ -96,7 +102,11 @@ export const Hero = () => (
                       <div key={i} className="flex items-end gap-1">
                         <div
                           className="w-full rounded-sm bg-(--green)"
-                          style={{ height: `${h}%`, minHeight: 3, maxHeight: 20 }}
+                          style={{
+                            height: `${h}%`,
+                            minHeight: 3,
+                            maxHeight: 20,
+                          }}
                         />
                       </div>
                     ))}
