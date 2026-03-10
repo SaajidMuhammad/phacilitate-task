@@ -101,9 +101,7 @@ export const Hero = () => (
         </div>
 
         {/* 2. TOP RIGHT: CURRENCIES */}
-        <div
-          className="overflow-hidden rounded-l-full bg-[#EBE9DB] p-8 flex flex-col justify-between"
-        >
+        <div className="overflow-hidden rounded-l-full bg-[#EBE9DB] p-8 flex flex-col justify-between">
           <div className="relative z-10">
             <h3 className="text-[3.5rem] pl-32 font-medium tracking-tight text-[#1A2E26] leading-none">
               56+
@@ -129,17 +127,12 @@ export const Hero = () => (
           </div>
         </div>
 
-        {/* 3. BOTTOM LEFT: USERS ACTIVE */}
-        <div className="relative aspect-square overflow-hidden bg-[#D9E3DE] p-8 flex flex-col justify-between">
-          {/* Large decorative circle mask (Bottom Right oriented) */}
-          <div className="absolute -bottom-16 -right-16 h-72 w-72 rounded-full bg-white/40 pointer-events-none" />
-
+        <div className="relative aspect-square overflow-hidden bg-[#D9E3DE] rounded-tr-[50%] p-8 flex flex-col justify-between">
           <div className="relative z-10 flex gap-1">
-            {/* Custom Sparkle Shapes using clip-path */}
             {[1, 2].map((i) => (
               <div
                 key={i}
-                className="h-10 w-8 bg-[#1A2E26]"
+                className="h-10 w-10 bg-[#1A2E26]"
                 style={{
                   clipPath:
                     "polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%)",
@@ -159,14 +152,16 @@ export const Hero = () => (
                     key={i}
                     className="h-12 w-12 rounded-full border-[3px] border-[#D9E3DE] bg-gray-300 overflow-hidden shadow-sm"
                   >
-                    <img
+                    <Image
                       src={`https://i.pravatar.cc/150?u=acc${i}`}
                       alt="user"
+                      width={150}
+                      height={150}
                     />
                   </div>
                 ))}
               </div>
-              <button className="h-12 w-12 rounded-full bg-[#1A2E26] flex items-center justify-center text-white transition-transform hover:scale-105">
+              <button className="h-12 w-12 -ml-6 rounded-full bg-[#1A2E26] border-[3px] border-[#D9E3DE] flex items-center justify-center text-white transition-transform hover:scale-105">
                 <svg
                   width="20"
                   height="20"
