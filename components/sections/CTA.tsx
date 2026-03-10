@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { AnimatedSection, itemVariants } from "@/components/ui/AnimatedSection";
 
 export const CTA = () => (
-  <section className="bg-[var(--green)] px-5 py-16 sm:px-8 md:py-24 lg:px-10">
+  <section className="bg-(--green) px-5 py-16 sm:px-8 md:py-24 lg:px-10">
     <AnimatedSection className="mx-auto grid max-w-[1200px] items-center gap-10 md:grid-cols-2 md:gap-16">
       <div>
         <motion.h2
@@ -32,7 +32,7 @@ export const CTA = () => (
             variant="primary"
             size="lg"
             href="#"
-            className="bg-white text-[var(--green)] hover:bg-[var(--cream)]"
+            className="bg-white text-(--green) hover:bg-(--cream)"
           >
             Get Started Now
           </Button>

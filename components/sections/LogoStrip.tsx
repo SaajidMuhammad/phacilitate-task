@@ -13,14 +13,14 @@ const logoStyles: Record<string, string> = {
 };
 
 export const LogoStrip = () => (
-  <section className="border-y border-[var(--border-light)] bg-white px-5 py-8 sm:px-8 md:py-10 lg:px-10">
+  <section className="border-y border-(--border-light) bg-white px-5 py-8 sm:px-8 md:py-10 lg:px-10">
     <AnimatedSection className="mx-auto max-w-[1200px]">
       <div className="flex flex-wrap items-center justify-center gap-8 md:justify-between md:gap-12">
         {PARTNER_LOGOS.map((name) => (
           <motion.span
             key={name}
             variants={itemVariants}
-            className={`text-lg text-[var(--navy)] opacity-60 transition-opacity duration-200 hover:opacity-100 md:text-xl ${logoStyles[name] ?? ""}`}
+            className={`text-lg text-(--navy) opacity-60 transition-opacity duration-200 hover:opacity-100 md:text-xl ${logoStyles[name] ?? ""}`}
           >
             {name === "OpenAI" ? (
               <span className="flex items-center gap-1">

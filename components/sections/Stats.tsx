@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { AnimatedSection, itemVariants } from "@/components/ui/AnimatedSection";
 
 export const Stats = () => (
-  <section className="bg-[var(--green)] px-5 py-16 sm:px-8 md:py-24 lg:px-10">
+  <section className="bg-(--green) px-5 py-16 sm:px-8 md:py-24 lg:px-10">
     <AnimatedSection className="mx-auto grid max-w-[1200px] items-center gap-10 md:grid-cols-2 md:gap-16">
       <div className="flex flex-wrap gap-8 md:gap-12">
         <motion.div variants={itemVariants}>

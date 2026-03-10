@@ -15,21 +15,21 @@ export const Hero = () => (
       <div className="max-w-lg pt-4 md:pt-8">
         <motion.span
           {...fadeUp(0)}
-          className="mb-5 inline-block text-xs font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]"
+          className="mb-5 inline-block text-xs font-medium uppercase tracking-[0.15em] text-(--text-muted)"
         >
           We&apos;re here
         </motion.span>
 
         <motion.h1
           {...fadeUp(0.05)}
-          className="text-[36px] leading-[1.1] font-bold tracking-tight text-[var(--navy)] sm:text-[44px] md:text-[52px] lg:text-[58px]"
+          className="text-[36px] leading-[1.1] font-bold tracking-tight text-(--navy) sm:text-[44px] md:text-[52px] lg:text-[58px]"
         >
           Change the way
           <br />
           you use your
           <br />
           <span
-            className="text-[var(--green)]"
+            className="text-(--green)"
             style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontStyle: "italic" }}
           >
             money
@@ -38,7 +38,7 @@ export const Hero = () => (
 
         <motion.p
           {...fadeUp(0.12)}
-          className="mt-5 max-w-sm text-[15px] leading-relaxed text-[var(--text-muted)]"
+          className="mt-5 max-w-sm text-[15px] leading-relaxed text-(--text-muted)"
         >
           From your everyday spending, to plan for your future with savings and investments. Ascone helps you get more from your money.
         </motion.p>
@@ -78,24 +78,24 @@ export const Hero = () => (
       >
         <div className="relative w-full max-w-[480px]">
           <div className="relative mx-auto w-[200px] sm:w-[220px] md:w-[240px]">
-            <div className="aspect-[9/18] rounded-[28px] border-2 border-[var(--border)] bg-[var(--sage)] p-2 shadow-lg">
+            <div className="aspect-[9/18] rounded-[28px] border-2 border-(--border) bg-(--sage) p-2 shadow-lg">
               <div className="flex h-full flex-col rounded-[22px] bg-white p-3">
                 <div className="mb-2 flex items-center justify-between">
-                  <div className="h-2 w-10 rounded-full bg-[var(--border)]" />
-                  <div className="h-5 w-5 rounded-full bg-[var(--sage)]" />
+                  <div className="h-2 w-10 rounded-full bg-(--border)" />
+                  <div className="h-5 w-5 rounded-full bg-(--sage)" />
                 </div>
                 <div className="mb-3 mt-2">
-                  <div className="h-2 w-20 rounded-full bg-[var(--border)]" />
-                  <div className="mt-1.5 h-4 w-14 rounded bg-[var(--text-primary)] text-[8px] font-bold leading-[16px] text-white text-center">
+                  <div className="h-2 w-20 rounded-full bg-(--border)" />
+                  <div className="mt-1.5 h-4 w-14 rounded bg-(--text-primary) text-[8px] font-bold leading-[16px] text-white text-center">
                     $4,250
                   </div>
                 </div>
-                <div className="flex-1 rounded-xl bg-[var(--sage)]/30 p-2">
+                <div className="flex-1 rounded-xl bg-(--sage)/30 p-2">
                   <div className="flex h-full flex-col justify-end gap-1">
                     {[40, 65, 50, 80, 60, 75, 90].map((h, i) => (
                       <div key={i} className="flex items-end gap-1">
                         <div
-                          className="w-full rounded-sm bg-[var(--green)]"
+                          className="w-full rounded-sm bg-(--green)"
                           style={{ height: `${h}%`, minHeight: 3, maxHeight: 20 }}
                         />
                       </div>
@@ -110,34 +110,34 @@ export const Hero = () => (
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
-            className="absolute top-4 right-0 rounded-[var(--radius-lg)] border border-[var(--border-light)] bg-white p-4 shadow-md sm:right-2"
+            className="absolute top-4 right-0 rounded-lg border border-(--border-light) bg-white p-4 shadow-md sm:right-2"
           >
-            <p className="text-[26px] font-bold text-[var(--green)]">56+</p>
-            <p className="text-[11px] text-[var(--text-muted)]">Currencies</p>
+            <p className="text-[26px] font-bold text-(--green)">56+</p>
+            <p className="text-[11px] text-(--text-muted)">Currencies</p>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.55, ease: "easeOut" }}
-            className="absolute top-28 right-[-10px] rounded-[var(--radius-lg)] border border-[var(--border-light)] bg-white px-4 py-3 shadow-md sm:right-0"
+            className="absolute top-28 right-[-10px] rounded-lg border border-(--border-light) bg-white px-4 py-3 shadow-md sm:right-0"
           >
-            <p className="text-[22px] font-bold text-[var(--navy)]">$196,000</p>
-            <p className="text-[11px] text-[var(--text-muted)]">Users Active</p>
+            <p className="text-[22px] font-bold text-(--navy)">$196,000</p>
+            <p className="text-[11px] text-(--text-muted)">Users Active</p>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.65, ease: "easeOut" }}
-            className="absolute bottom-16 right-0 rounded-[var(--radius-lg)] border border-[var(--border-light)] bg-white px-4 py-3 shadow-md sm:right-4"
+            className="absolute bottom-16 right-0 rounded-lg border border-(--border-light) bg-white px-4 py-3 shadow-md sm:right-4"
           >
-            <p className="text-[11px] text-[var(--text-muted)]">Saving</p>
+            <p className="text-[11px] text-(--text-muted)">Saving</p>
             <div className="mt-1 flex items-center gap-2">
-              <div className="h-6 w-6 rounded-full bg-[var(--sage)]" />
+              <div className="h-6 w-6 rounded-full bg-(--sage)" />
               <div className="flex flex-col">
-                <div className="h-1 w-12 rounded-full bg-[var(--green)]" />
-                <div className="mt-0.5 h-1 w-8 rounded-full bg-[var(--sage)]" />
+                <div className="h-1 w-12 rounded-full bg-(--green)" />
+                <div className="mt-0.5 h-1 w-8 rounded-full bg-(--sage)" />
               </div>
             </div>
           </motion.div>

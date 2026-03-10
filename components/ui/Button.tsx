@@ -17,11 +17,11 @@ type ButtonProps = ButtonAsButton | ButtonAsLink;
 
 const variantStyles = {
   primary:
-    "bg-[var(--green)] text-white hover:bg-[var(--green-light)]",
+    "bg-(--green) text-white hover:bg-(--green-light)",
   outline:
-    "border border-[var(--border)] text-[var(--text-primary)] bg-white hover:bg-[var(--sage)]",
+    "border border-(--border) text-(--text-primary) bg-white hover:bg-(--sage)",
   ghost:
-    "text-[var(--text-secondary)] hover:text-[var(--green)]",
+    "text-(--text-secondary) hover:text-(--green)",
 } as const;
 
 const sizeStyles = {
@@ -39,10 +39,10 @@ export const Button = ({
 }: ButtonProps) => {
   const baseClasses = [
     "inline-flex items-center justify-center font-medium",
-    "rounded-[var(--radius-full)] cursor-pointer",
+    "rounded-full cursor-pointer",
     "transition-all duration-200 ease-out",
     "hover:scale-[1.02] active:scale-[0.98]",
-    "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--green)]",
+    "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--green)",
     "min-h-[44px] select-none whitespace-nowrap",
     variantStyles[variant],
     sizeStyles[size],

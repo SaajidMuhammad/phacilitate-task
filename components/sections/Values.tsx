@@ -26,14 +26,14 @@ const icons: Record<string, React.ReactNode> = {
 };
 
 export const Values = () => (
-  <section id="benefits" className="bg-[var(--bg)] px-5 py-16 sm:px-8 md:py-24 lg:px-10">
+  <section id="benefits" className="bg-(--bg) px-5 py-16 sm:px-8 md:py-24 lg:px-10">
     <AnimatedSection className="mx-auto max-w-[1200px]">
       <div className="mb-12 grid items-end gap-6 md:mb-16 md:grid-cols-2">
         <motion.div variants={itemVariants}>
-          <span className="mb-3 inline-block text-xs font-medium uppercase tracking-[0.15em] text-[var(--text-muted)]">
+          <span className="mb-3 inline-block text-xs font-medium uppercase tracking-[0.15em] text-(--text-muted)">
             Values
           </span>
-          <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-[var(--navy)] sm:text-[34px] md:text-[40px]">
+          <h2 className="text-[28px] font-bold leading-[1.15] tracking-tight text-(--navy) sm:text-[34px] md:text-[40px]">
             Make your
             <br />
             spend, Well-spent
@@ -41,7 +41,7 @@ export const Values = () => (
         </motion.div>
         <motion.p
           variants={itemVariants}
-          className="max-w-md text-[15px] leading-relaxed text-[var(--text-muted)] md:text-right"
+          className="max-w-md text-[15px] leading-relaxed text-(--text-muted) md:text-right"
         >
           Manage a diversified group of securities and/or credit transfer with almost half-standard complaints.
         </motion.p>
@@ -52,11 +52,11 @@ export const Values = () => (
           <motion.div
             key={value.title}
             variants={itemVariants}
-            className="rounded-[var(--radius-lg)] border border-[var(--border-light)] bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg md:p-8"
+            className="rounded-lg border border-(--border-light) bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg md:p-8"
           >
             <div className="mb-5">{icons[value.icon]}</div>
-            <h3 className="text-[16px] font-semibold text-[var(--navy)]">{value.title}</h3>
-            <p className="mt-2 text-[13px] leading-relaxed text-[var(--text-muted)]">
+            <h3 className="text-[16px] font-semibold text-(--navy)">{value.title}</h3>
+            <p className="mt-2 text-[13px] leading-relaxed text-(--text-muted)">
               {value.description}
             </p>
           </motion.div>
