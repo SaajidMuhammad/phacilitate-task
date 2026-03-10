@@ -100,7 +100,6 @@ export const Hero = () => (
           </div>
         </div>
 
-        {/* 2. TOP RIGHT: CURRENCIES */}
         <div className="overflow-hidden rounded-l-full bg-[#EBE9DB] p-8 flex flex-col justify-between">
           <div className="relative z-10">
             <h3 className="text-[3.5rem] pl-32 font-medium tracking-tight text-[#1A2E26] leading-none">
@@ -177,7 +176,6 @@ export const Hero = () => (
           </div>
         </div>
 
-        {/* 4. BOTTOM RIGHT: SAVINGS GRAPH */}
         <div className="relative aspect-square overflow-hidden bg-[#243B33] p-8 flex flex-col justify-between text-white">
           <div className="flex items-start justify-between">
             <h3 className="text-3xl font-medium tracking-tight">$196,000</h3>
@@ -196,7 +194,6 @@ export const Hero = () => (
           </div>
 
           <div className="flex-1 flex items-center pt-8">
-            {/* Sharp, pixel-accurate growth line */}
             <svg viewBox="0 0 140 60" className="w-full h-24 overflow-visible">
               <motion.path
                 initial={{ pathLength: 0 }}
