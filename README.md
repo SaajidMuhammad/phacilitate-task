@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ascone Landing Page
 
-## Getting Started
+A modern, responsive one-page landing page for Ascone, a fintech application. Built with Next.js 16, Tailwind CSS v4, and Framer Motion.
 
-First, run the development server:
+## Setup
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view locally.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Production Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+pnpm build
+pnpm start
+```
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+| Layer       | Technology               |
+|-------------|--------------------------|
+| Framework   | Next.js 16 (App Router)  |
+| UI          | React 19                 |
+| Styling     | Tailwind CSS v4          |
+| Animations  | Framer Motion 12         |
+| Language    | TypeScript 5             |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+app/
+  layout.tsx              Root layout with metadata
+  page.tsx                Page composition
+  globals.css             Brand design tokens and base styles
+components/
+  layout/
+    Header.tsx            Sticky nav with top banner, mobile drawer
+    Footer.tsx            Multi-column footer with bottom links
+  sections/
+    Hero.tsx              Hero with staggered fade-in, phone mockup, stat cards
+    LogoStrip.tsx         Partner logo row
+    AboutUs.tsx           Centered about heading
+    FeatureCards.tsx       Two-column feature cards (savings, global transfers)
+    Values.tsx            Three-column value proposition cards
+    Stats.tsx             Dark green stats banner ($14B, 23k+)
+    FAQ.tsx               Accordion FAQ with animated expand/collapse
+    CTA.tsx               Full-width call-to-action with star graphics
+  ui/
+    Button.tsx            Polymorphic button/anchor with variants
+    AnimatedSection.tsx   Scroll-triggered stagger animation wrapper
+lib/
+  constants.ts            Static content, navigation, and FAQ data
+```
 
-## Deploy on Vercel
+## Brand Guide
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Typography:** Helvetica (Bold, SemiBold, Medium, Regular)
+- **Colors:**
+  - Primary dark green: `#1C3F3A`
+  - Light sage: `#E0EAE8`
+  - Cream: `#EBE8D8`
+  - Navy: `#0A0C29`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Animations
+
+- **Hero:** Staggered fade-in + slide-up on load (headline, subtext, CTA, stat cards)
+- **Scroll sections:** Content blocks animate into view via Intersection Observer with stagger
+- **Buttons:** Scale + transition on hover (200ms ease-out)
+- **Cards:** Subtle lift + shadow on hover (300ms ease-out)
+- **FAQ accordion:** Smooth height + opacity animation on expand/collapse
+- **Mobile nav:** Animated drawer open/close
+- **Accessibility:** All animations respect `prefers-reduced-motion` media query
+
+## Assumptions
+
+- Helvetica is used as the primary typeface (with Helvetica Neue and Arial as fallbacks)
+- Brand logo text "Ascone" rendered in Georgia serif per the design
+- Placeholder abstract SVG visuals used for the hero phone mockup and CTA graphics
+- All external links point to `#` as placeholders
+- FAQ answers are representative placeholder copy
